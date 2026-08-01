@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <title>eblo.id Reskin</title>
+</head>
+<body>
+  <header class="hd">
+    <div class="hd-title">eblo.id <span>Reskin</span></div>
+    <div class="hd-sub">Кастомные темы интерфейса</div>
+  </header>
+
+  <section class="block">
+    <div class="block-label">Тема</div>
+    <div class="themes">
+      <label class="theme-card">
+        <input type="radio" name="theme" value="default">
+        <span class="tc-body">
+          <span class="tc-swatch tc-default"></span>
+          <span class="tc-name">Оригинал</span>
+        </span>
+      </label>
+      <label class="theme-card">
+        <input type="radio" name="theme" value="vk-old">
+        <span class="tc-body">
+          <span class="tc-swatch tc-vk"></span>
+          <span class="tc-name">Старый ВК</span>
+        </span>
+      </label>
+      <label class="theme-card">
+        <input type="radio" name="theme" value="telegram">
+        <span class="tc-body">
+          <span class="tc-swatch tc-tg"></span>
+          <span class="tc-name">Telegram</span>
+        </span>
+      </label>
+    </div>
+  </section>
+
+  <section class="block" id="tg-opts">
+    <div class="block-label">Опции Telegram</div>
+    <label class="row">
+      <span class="row-txt"><b>Тёмная тема</b><small>Тёмный вариант Telegram</small></span>
+      <span class="switch"><input type="checkbox" id="dark"><span class="slider"></span></span>
+    </label>
+    <label class="row">
+      <span class="row-txt"><b>Лента с комментариями</b><small>Компактные посты + комментарии сбоку</small></span>
+      <span class="switch"><input type="checkbox" id="reels"><span class="slider"></span></span>
+    </label>
+  </section>
+
+  <footer class="ft">Изменения применяются на eblo.id мгновенно · v0.3.0</footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

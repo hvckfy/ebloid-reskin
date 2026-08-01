@@ -1,0 +1,103 @@
+/* vk-old.css — тема «Старый ВКонтакте» (2009–2016). Оммаж, без логотипов/ТМ. */
+html.theme-vk-old {
+  --vk-blue: #4a76a8;
+  --vk-blue-dark: #2b587a;
+  --vk-bg: #ededed;
+  --vk-content: #ffffff;
+  --vk-border: #dfdfdf;
+  --vk-text: #2a2a2a;
+  --vk-muted: #939393;
+  --vk-link: #2b587a;
+  --vk-red: #ff3347;
+  --vk-radius: 2px;
+  --vk-font: Tahoma, Verdana, Geneva, Arial, sans-serif;
+}
+
+html.theme-vk-old body {
+  background: var(--vk-bg) !important;
+  color: var(--vk-text) !important;
+  font-family: var(--vk-font) !important;
+  font-size: 12px !important;
+}
+
+/* ---- Шапка ---- */
+html.theme-vk-old .main-header {
+  background: var(--vk-blue) !important;
+  border: 1px solid var(--vk-blue-dark) !important;
+  border-radius: 12px !important;
+  top: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
+}
+html.theme-vk-old .nav-btn {
+  color: #e9f0f7 !important;
+  font-weight: normal !important;
+  border-radius: var(--vk-radius) !important;
+  padding: 6px 10px !important;
+}
+html.theme-vk-old .nav-btn:hover { background: rgba(255, 255, 255, .12) !important; color: #fff !important; }
+html.theme-vk-old .nav-btn.active { background: var(--vk-blue-dark) !important; color: #fff !important; font-weight: bold !important; }
+
+html.theme-vk-old .search-input {
+  background: #fff !important;
+  border: 1px solid var(--vk-blue-dark) !important;
+  border-radius: var(--vk-radius) !important;
+  color: var(--vk-text) !important;
+  font-family: var(--vk-font) !important;
+}
+html.theme-vk-old .auth-btn {
+  background: #5b88bd !important;
+  border: 1px solid var(--vk-blue-dark) !important;
+  border-radius: var(--vk-radius) !important;
+  color: #fff !important;
+}
+
+/* ---- Мобильные бары ---- */
+html.theme-vk-old .mobile-header,
+html.theme-vk-old .mobile-tabbar { background: var(--vk-blue) !important; color: #fff !important; }
+html.theme-vk-old .mobile-tab.active { color: #fff !important; }
+
+/* ---- Лента ---- */
+html.theme-vk-old .content-wrapper { background: transparent !important; }
+html.theme-vk-old .feed-grid { gap: 12px !important; }
+
+html.theme-vk-old .feed-card {
+  background: var(--vk-content) !important;
+  border: 1px solid var(--vk-border) !important;
+  border-radius: var(--vk-radius) !important;
+  box-shadow: none !important;
+  color: var(--vk-text) !important;
+}
+html.theme-vk-old .feed-card:hover { border-color: #c8d3df !important; box-shadow: 0 0 0 1px #dfe6ef !important; }
+
+html.theme-vk-old .feed-card-title { color: var(--vk-link) !important; font-weight: bold !important; font-size: 12px !important; }
+html.theme-vk-old .feed-card-title:hover { text-decoration: underline !important; }
+html.theme-vk-old .feed-card-username { color: var(--vk-link) !important; font-weight: bold !important; }
+html.theme-vk-old .feed-card-author-date,
+html.theme-vk-old .feed-card-description { color: var(--vk-muted) !important; }
+html.theme-vk-old .feed-card-avatar { border-radius: var(--vk-radius) !important; }
+
+/* Метрики */
+html.theme-vk-old .feed-card-stats { color: var(--vk-muted) !important; font-size: 11px !important; }
+html.theme-vk-old .feed-card-likes { color: var(--vk-red) !important; }
+
+/* Фильтры — под серые табы старого VK */
+html.theme-vk-old .filter-option {
+  color: var(--vk-link) !important;
+  border-radius: var(--vk-radius) !important;
+  font-family: var(--vk-font) !important;
+}
+html.theme-vk-old .filter-option.active { color: var(--vk-text) !important; font-weight: bold !important; background: #e3e9f0 !important; }
+
+/* Кнопка «наверх» */
+html.theme-vk-old .scroll-top-btn { background: var(--vk-blue) !important; color: #fff !important; border-radius: var(--vk-radius) !important; }
+
+/* Модалки */
+html.theme-vk-old .settings-modal,
+html.theme-vk-old .support-modal,
+html.theme-vk-old .post-preview-modal-container {
+  background: var(--vk-content) !important;
+  color: var(--vk-text) !important;
+  border: 1px solid var(--vk-border) !important;
+  border-radius: var(--vk-radius) !important;
+}

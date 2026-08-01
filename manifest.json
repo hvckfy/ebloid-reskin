@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "eblo.id Reskin",
+  "version": "0.3.0",
+  "description": "Кастомные темы для eblo.id: Старый ВКонтакте и Telegram + компактная лента с комментариями, видео и листанием альбомов.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://eblo.id/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "eblo.id Reskin",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://eblo.id/*"],
+      "js": ["src/selectors.js", "src/api-cache.js", "src/theme-engine.js", "src/feed-swipe.js", "src/content.js"],
+      "css": ["themes/tokens.css", "themes/vk-old.css", "themes/telegram.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

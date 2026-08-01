@@ -1,0 +1,106 @@
+/* telegram.css — тема «Telegram» (светлая + тёмная). Оммаж, без логотипов/ТМ. */
+html.theme-telegram {
+  --tg-accent: #3390ec;
+  --tg-accent-dark: #2b7ad1;
+  --tg-bg: #ffffff;
+  --tg-bg2: #f4f4f5;
+  --tg-bubble: #ffffff;
+  --tg-text: #0f0f0f;
+  --tg-muted: #707579;
+  --tg-border: #e7e7e8;
+  --tg-radius: 14px;
+  --tg-shadow: 0 1px 2px rgba(16, 35, 47, .14);
+  --tg-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+html.theme-telegram.is-dark {
+  --tg-bg: #17212b;
+  --tg-bg2: #0e1621;
+  --tg-bubble: #182533;
+  --tg-text: #ffffff;
+  --tg-muted: #6d7f8f;
+  --tg-border: #101921;
+  --tg-accent: #6ab7ff;
+  --tg-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+}
+
+html.theme-telegram body {
+  background: var(--tg-bg2) !important;
+  color: var(--tg-text) !important;
+  font-family: var(--tg-font) !important;
+}
+
+/* ---- Шапка: компактная, полупрозрачная с blur ---- */
+html.theme-telegram .main-header {
+  background: color-mix(in srgb, var(--tg-bg) 82%, transparent) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--tg-border) !important;
+  border-radius: 18px !important;
+  top: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .18) !important;
+}
+html.theme-telegram .nav-btn { color: var(--tg-muted) !important; border-radius: 10px !important; font-weight: 500 !important; }
+html.theme-telegram .nav-btn:hover { background: color-mix(in srgb, var(--tg-accent) 12%, transparent) !important; color: var(--tg-text) !important; }
+html.theme-telegram .nav-btn.active { color: var(--tg-accent) !important; background: color-mix(in srgb, var(--tg-accent) 14%, transparent) !important; }
+
+html.theme-telegram .search-input {
+  background: var(--tg-bg2) !important;
+  border: 1px solid var(--tg-border) !important;
+  border-radius: 18px !important;
+  color: var(--tg-text) !important;
+}
+html.theme-telegram .auth-btn {
+  background: var(--tg-accent) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 20px !important;
+}
+
+/* ---- Мобильные бары ---- */
+html.theme-telegram .mobile-header,
+html.theme-telegram .mobile-tabbar {
+  background: color-mix(in srgb, var(--tg-bg) 88%, transparent) !important;
+  backdrop-filter: blur(12px);
+  border-color: var(--tg-border) !important;
+  color: var(--tg-text) !important;
+}
+html.theme-telegram .mobile-tab.active { color: var(--tg-accent) !important; }
+
+/* ---- Лента: карточка = «пузырь сообщения» ---- */
+html.theme-telegram .feed-card {
+  background: var(--tg-bubble) !important;
+  border: 1px solid var(--tg-border) !important;
+  border-radius: var(--tg-radius) !important;
+  box-shadow: var(--tg-shadow) !important;
+  color: var(--tg-text) !important;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+html.theme-telegram .feed-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, .16) !important; }
+html.theme-telegram .feed-card-preview img,
+html.theme-telegram .feed-card-preview video { border-radius: 10px 10px 0 0; }
+
+html.theme-telegram .feed-card-title { color: var(--tg-text) !important; font-weight: 600 !important; }
+html.theme-telegram .feed-card-username { color: var(--tg-accent) !important; font-weight: 600 !important; }
+html.theme-telegram .feed-card-author-date,
+html.theme-telegram .feed-card-description,
+html.theme-telegram .feed-card-stats { color: var(--tg-muted) !important; }
+html.theme-telegram .feed-card-avatar { border-radius: 50% !important; }
+html.theme-telegram .emote-inline { vertical-align: -0.25em; }
+
+/* Фильтры */
+html.theme-telegram .filter-option { color: var(--tg-muted) !important; border-radius: 16px !important; }
+html.theme-telegram .filter-option.active { color: #fff !important; background: var(--tg-accent) !important; }
+
+/* Кнопка «наверх» */
+html.theme-telegram .scroll-top-btn { background: var(--tg-accent) !important; color: #fff !important; border-radius: 50% !important; box-shadow: var(--tg-shadow) !important; }
+
+/* Модалки */
+html.theme-telegram .settings-modal,
+html.theme-telegram .support-modal,
+html.theme-telegram .post-preview-modal-container {
+  background: var(--tg-bubble) !important;
+  color: var(--tg-text) !important;
+  border: 1px solid var(--tg-border) !important;
+  border-radius: var(--tg-radius) !important;
+}
